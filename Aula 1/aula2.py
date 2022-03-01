@@ -1,4 +1,5 @@
 #corresponde ao video 6 do curso
+# Primeiros passos
 
 n = input('Digite algo: ')
 print(n.isnumeric()) # se é numerico
