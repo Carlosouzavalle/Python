@@ -1,6 +1,7 @@
 # print('Hello World!')
 # print writes a mensage in your screen 
-
+print(7+4)
+print('7'+'4')
 
 nome = input('Whats your name? ')
 idade = input('how old are you? ')
