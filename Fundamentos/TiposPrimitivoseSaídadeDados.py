@@ -4,9 +4,15 @@
 # print('a soma entre {} e {} é {}'.format(n1, n2, s))
 # nao_convertido = input('tap other value: ')
 
-# float, bool, str, int
+
+# float = 1.3, 5.2 etc...
+# bool = true ou false/ verdadeiro ou falso
+# str = string = valor de texto
+# int = 1, 2, 3 = numero inteiro
+
 
 n = input('Digite algo? ')
 print(n.isnumeric())
 print(n.isalpha())
 print(n.isalnum())
+
