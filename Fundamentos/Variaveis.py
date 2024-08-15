@@ -10,7 +10,7 @@
 #print(type(idade)) # int
 #print(type(1+2j)) # complex: tipo de dado utilizado em calculos de circuitos eletricos
 
-# FUnção isinstance
+# Função isinstance
 # ela vai pegar a variavel vai verificar o valor se é int e se for retorna true
 
 a = 10
