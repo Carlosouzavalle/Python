@@ -11,6 +11,8 @@
 # int = 1, 2, 3 = numero inteiro
 
 
+
+# são metodos para verificar o valor
 n = input('Digite algo? ')
 print(n.isnumeric())
 print(n.isalpha())
