@@ -9,7 +9,6 @@
 # print('fim do laço')
 
 
-
 nome = None
 
 while True:
