@@ -1,6 +1,0 @@
-dia = input('what day were you born?')
-mes = input('what month were you born?')
-ano = input('what year were you born?')
-saudacaoDia = ('voce nasceu no dia')
-saudacaoDe = ('de')
-print(saudacaoDia, dia,saudacaoDe,mes,saudacaoDe,ano)

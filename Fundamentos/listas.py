@@ -1,5 +1,10 @@
 # listas
 
+# Uma lista em Python é uma estrutura de dados que armazena uma sequência de valores. As listas em Python 
+# são classificadas como um tipo de dado mutável, e portanto não possuem tamanho fixo: podemos adicionar ou 
+# remover elementos de listas de maneira dinâmica ao longo do código.
+
+
 lista_de_numeros = [1,2,3]
 lista_de_clientes = ['carlos', 'bia', 'fernanda']
 
@@ -15,11 +20,6 @@ print(lista_de_numeros[2])
 lista_de_numeros[0] = 5
 
 print(lista_de_numeros[0])
-
-
-# Uma lista em Python é uma estrutura de dados que armazena uma sequência de valores. As listas em Python 
-# são classificadas como um tipo de dado mutável, e portanto não possuem tamanho fixo: podemos adicionar ou 
-# remover elementos de listas de maneira dinâmica ao longo do código.
 
 
 
@@ -43,13 +43,13 @@ print(lista_de_clientes)
 
 
 
-fruitas = ['maça', 'laranja', 'uva']
+frutas = ['maça', 'laranja', 'uva']
 
-fruitas.remove("maça") # vai remover o elemento selecionado 
-print(fruitas)
+frutas.remove("maça") # vai remover o elemento selecionado 
+print(frutas)
 
-fruitas.reverse() # ele vai inverter os elementos da lista
-print(fruitas)
+frutas.reverse() # ele vai inverter os elementos da lista
+print(frutas)
 
 
 numeros = [1,2,3,4,5]
@@ -61,5 +61,9 @@ print(numeros)
 numeros.clear() # remove todos os elementos de uma lista
 print(numeros)
 
-x = fruitas.copy() # retorna uma copia de uma lista especifica
+x = frutas.copy() # retorna uma copia de uma lista especifica
 print(x)
+
+
+y = len(frutas) # retorna o numero de elementos de uma lista
+print(y)
