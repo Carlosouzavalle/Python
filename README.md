@@ -5,5 +5,5 @@
 
  <ol>
   <li><a href="https://github.com/Carlosouzavalle/Python/tree/main/Fundamentos">Teorico</a></li>
-  <li><a href="https://github.com/Carlosouzavalle/Python/tree/main/Desafios">Desafios</a></li>
+  <li><a href="https://github.com/Carlosouzavalle/Python/tree/main/Desafios">Desafios Resolvidos</a></li>
  </ol>
