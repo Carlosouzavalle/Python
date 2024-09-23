@@ -4,5 +4,5 @@
  Meus estudos de python na faculdade ;-;
 
  <ol>
-  <li><a href="">Teorico</a></li>
+  <li><a href="https://github.com/Carlosouzavalle/Python/tree/main/Fundamentos">Teorico</a></li>
  </ol>
