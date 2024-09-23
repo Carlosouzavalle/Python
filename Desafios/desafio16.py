@@ -1,4 +1,4 @@
-#crie um algoritmo que leia um numero e mostre sua porção inteira
+# crie um algoritmo que leia um numero e mostre sua porção inteira
 
 # valor = float(input('Digite um numero? '))
 # print(f'{valor :.0f}')

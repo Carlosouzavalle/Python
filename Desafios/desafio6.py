@@ -1,4 +1,4 @@
-#crie um algoritmo que mostre o dobro, o triplo e a raiz
+# crie um algoritmo que mostre o dobro, o triplo e a raiz
 
 valor = int(input('digite o valor: '))
 a = valor * 2

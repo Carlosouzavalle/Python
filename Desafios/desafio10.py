@@ -1,4 +1,4 @@
-#crie um algoritmo que receba o valor em real e converta ele para dolar
+# crie um algoritmo que receba o valor em real e converta ele para dolar
 
 carteira_real = float(input('Quantos você tem na carteira? R$'))
 dolar = 5.47

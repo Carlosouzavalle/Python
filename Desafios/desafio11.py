@@ -1,3 +1,5 @@
+# faça um programa que receba a altura e a largura mostre o tamanho e m² e quantos litros de tinta precisa para pintar
+
 altura = float(input('Qual a altura? '))
 largura = float(input('Qual a largura? '))
 metros_quadrados = altura * largura

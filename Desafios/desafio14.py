@@ -1,4 +1,4 @@
-#conversão de temperatura de celsius para Fahrenheit 
+# conversão de temperatura de celsius para Fahrenheit 
 
 
 Celsius  = float(input('Qual a temperatura? '))

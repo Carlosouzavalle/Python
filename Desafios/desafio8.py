@@ -1,4 +1,4 @@
-#escreva um programa em metros e mostre ele em outras medidas
+# escreva um programa em metros e mostre ele em outras medidas
 
 valor = float(input('Digite uma distancia em metros: '))
 km = valor / 10 / 10 / 10
