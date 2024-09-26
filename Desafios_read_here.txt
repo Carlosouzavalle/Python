@@ -23,3 +23,4 @@ qual foi alugado. sendo que o preço a pagar é 60R$ por dia e 0,15R$ por km rod
 de um triângulo, calcule e mostre o comprimento da hipotenusa.
 18 faça um programa que leia um angulo e mostre seu seno, cosseno e tangente
 19 sorteando un item da lista
+20 lista aleatoria

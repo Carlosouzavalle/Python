@@ -11,3 +11,4 @@ lista.append(item)
 sorteando = random.choice(lista)
 print(sorteando)
 
+# choice = Retorna um elemento aleatório da sequência não vazia seq. Se seq estiver vazio, levanta IndexError.
