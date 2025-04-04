@@ -34,3 +34,20 @@ print(saldo is not limite)
 
 print("orange" in frutas)
 print("orange" not in frutas)
+
+
+
+# laço de repetição 
+# for
+
+# for i in range(10):
+#     print(i)
+
+
+# while
+
+num = 0
+while (num <= 10):
+    num += 1
+    print(num)
+    
