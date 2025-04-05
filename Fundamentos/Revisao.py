@@ -46,8 +46,19 @@ print("orange" not in frutas)
 
 # while
 
-num = 0
-while (num <= 10):
-    num += 1
-    print(num)
+# num = 0
+# while (num <= 10):
+#     num += 1
+#     print(num)
     
+    
+
+# args e kwargs
+def calcular_imposto(valor, perc_ir):
+    ir = valor * perc_ir
+    iss = valor * 0.05
+    csll = valor * 0.0375
+    piss = valor * 0.03
+    return ir + iss + csll + piss
+
+print(calcular_imposto(1000, 0.025))
