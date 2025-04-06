@@ -6,7 +6,7 @@
 # tupla[0]=25 # vai dar erro
 # print(tupla[0]) # acessando o valor de uma tupla
 
-#tupla não é mutavel isso é vc não pode alterar valores ex: cpf, rg
+#tupla não é imutavel isso é vc não pode alterar valores ex: cpf, rg
 
 
 
