@@ -61,4 +61,4 @@ def calcular_imposto(valor, perc_ir):
     piss = valor * 0.03
     return ir + iss + csll + piss
 
-print(calcular_imposto(1000, 0.025))
+print(calcular_imposto(1000, 0.275))
