@@ -24,10 +24,10 @@ def deposito():
         Menu()
         
         
-        
-        
               
 def saque():
+    global qtd_saques, ContaCorrente
+    
     for s in range(5):
         if qtd_saques == 0:
             print("por hoje deu pai volta amanha")
@@ -41,27 +41,35 @@ def saque():
                 ContaCorrente -= ValorDeSaque
                 qtd_saques -=1
                 print(ContaCorrente)
-        Menu()
+    Menu()
                 
-                
+                                
 def Abrir_conta():
-    NAME = input("Qual seu nome? ")
-    AGE = int(input("Quantos anos  você tem? "))
-    print("Conta Criada com sucesso")
-    print(f"Seja Bem-Vindo {NAME}")
+    cliente = {
+        "NAME":  input("Qual seu nome? "),
+        "AGE":  int(input("Quantos anos  você tem? "))
+    }
+    return cliente
+    
+    
+def Usuario(usuario):
+    print(f"Seja Bem-Vindo(a) {usuario['NAME']}")
+
+
                 
                 
 def Menu():
-    mensagemBoasVindas = input("Escolha uma opção 1: Deposito 2: Saque 3: Abrir Conta")                     
+    mensagemBoasVindas = input("Escolha uma opção 1: Deposito?  2: Saque?  3: Abrir Conta? ")                     
 
     if mensagemBoasVindas == "1":
         deposito()
     elif mensagemBoasVindas == "2": 
         saque()
     elif mensagemBoasVindas == "3":
-        Abrir_conta()
+        #Abrir_conta()
+        usuario = Abrir_conta()
+        Usuario(usuario)
     else:
         print("Opção invalida")
-
 
 Menu()
