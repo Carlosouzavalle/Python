@@ -7,10 +7,9 @@
         <th scope="col">Ações</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="lista_clientes">
 
         {% for cliente in clientes %}
-
             {% include 'item_cliente.html' %}
         {% endfor %}
     </tbody>
