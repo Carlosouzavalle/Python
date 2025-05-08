@@ -43,7 +43,18 @@ def form_cliente(cliente_id):
 
 @cliente_route.route('/<int:cliente_id>/update', methods=['PUT'])
 def update_cliente(cliente_id):
-    pass
+    cliente_editado = None
+    
+    data = request.json
+    for c in CLIENTES:
+        if c['id'] == cliente_id:
+            c['nome'] = data['nome']
+            c['email'] = data['email']
+
+
+            cliente_editado = c
+            
+    return render_template('item_cliente.html', cliente=cliente_editado)
 
 @cliente_route.route('/<int:cliente_id>/delete', methods=['DELETE'])
 def delete_cliente(cliente_id):

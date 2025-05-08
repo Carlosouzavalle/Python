@@ -11,7 +11,21 @@
         method="POST"
       {% endif %}
       
-      c-append="#lista_clientes">
+      
+      action="{% if cliente %}{{ url_for('cliente.update_cliente', cliente_id=cliente.id) }}{% else %}{{ url_for('cliente.inserir_clientes') }}{% endif %}"
+      method="POST"
+      {% if cliente %}
+        c-swap="#cliente-{{cliente.id}}"
+      {% else %}
+        c-append="#lista_clientes"
+      {% endif %}>
+      
+      {% if cliente %}
+        <input type="hidden" name="_method" value="PUT">
+      {% endif %}
+      
+      
+      >
 
     <div class="mb-3">
       <label  class="form-label">Nome</label>
