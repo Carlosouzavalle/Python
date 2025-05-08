@@ -3,11 +3,19 @@
     <td>{{cliente.nome}}</td>
     <td>{{cliente.Email}}</td>
     <td>
+        <a class="btn btn-secondary" 
+            c-get="{{ url_for('cliente.detalhe_cliente', cliente_id=cliente.id) }}"
+            c-target="#exibir-cliente"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Ver
+        </a>
+
         <a class="btn btn-primary" 
             c-get="{{ url_for('cliente.form_cliente', cliente_id=cliente.id) }}"
             c-target="#gerenciar_cliente">
                 Editar
         </a>
+
         <button class="btn btn-danger" 
             c-delete="{{ url_for('cliente.delete_cliente', cliente_id=cliente.id ) }}"
             c-remove-closest="tr">
