@@ -23,6 +23,7 @@ class DoublyLinkedList:
         new_node.prev = current
         
     
+    
     def print_forward(self):
         current = self.head
         while current:
@@ -30,10 +31,12 @@ class DoublyLinkedList:
             current = current.next
         print("None")
         
+        
+        
     def print_backward(self):
         current = self.head
         if not current:
-            print("NOne")
+            print("None")
             return
         while current.next:
             current = current.next
@@ -41,6 +44,7 @@ class DoublyLinkedList:
             print(current.data, end=" <- ")
             current = current.prev
         print("None")
+        
         
 dll = DoublyLinkedList()
 dll.append(10)

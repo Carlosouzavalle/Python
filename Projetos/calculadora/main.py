@@ -1,9 +1,9 @@
-# from flask import Flask
-# app = Flask(__name__)
+from flask import Flask
+app = Flask(__name__)
 
 
-# # importa tudo do arquivo routes
-# from routes import *
+# importa tudo do arquivo routes
+from routes import *
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)

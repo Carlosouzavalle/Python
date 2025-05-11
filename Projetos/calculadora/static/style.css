@@ -3,17 +3,18 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
+    transition: background 0.3s, color 0.3s;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: 220px;
+    height: 250px;
     justify-content: center;
     background-color: cadetblue;
     padding: 10px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
 
@@ -34,7 +35,6 @@ body {
 }
 
 .item2 {
-   
     grid-column: 3;
 }
 
@@ -60,5 +60,36 @@ body {
 
 .display {
     height: 30px;
+    margin-bottom: 15px;
     background-color: white;
+}
+
+.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.light {
+  background: #f0f0f0;
+  color: #000000;
+}
+
+.DarkMode {
+    border-radius: 10px;
+    padding: 1px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.top-div {
+    display: flex;
+    height: 50px;
+    font-size: 1em;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 270px;
+}
+
+.top-div > h1 {
+    height: 15px;
 }
