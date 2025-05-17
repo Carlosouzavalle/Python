@@ -80,8 +80,6 @@ while True:
     4: posição y
     5: comprimento em px
     6: altura em px
-    
-    
     """
  
     pygame.display.update()
