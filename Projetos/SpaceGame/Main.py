@@ -35,6 +35,17 @@ for _ in range(20):
     y = random.randint(0, WINDOW_HEIGHT - 50)
     posicoes.append((x, y))
 
+meteors = []
+spawn_delay = 500
+last_spawn_time = pygame.time.get_ticks()
+
+# variaveis para controle da imagem e colisão
+player_visible = True
+hit_timer = 0
+cooldown = 1000
+
+life = 10
+font = pygame.font.SysFont('arial',  30, True, True)
 
 
 # game loop
@@ -49,7 +60,48 @@ while running:
     
     display_surface.fill('black')
     
-    
+    # SPANW DINÂMICO DE METEOROS
+    current_time = pygame.time.get_ticks()
+    if current_time - last_spawn_time > spawn_delay:
+        x = random.randint(0, WINDOW_WIDTH - meteor.get_width())
+        y = random.randint(-100, -40)
+        rect = meteor.get_rect(topleft=(x, y))
+        meteors.append(rect)
+        last_spawn_time = current_time
+        
+        
+    # MOVIMENTAR E DESENHAR METEOROS
+    for rect in meteors:
+        rect.y += 200 * dt
+        
+        if rect.top > WINDOW_HEIGHT:
+            meteors.remove(rect)
+            continue
+        display_surface.blit(meteor, rect)
+        
+        
+        #collision
+        if rect.colliderect(player_rect) and hit_timer <= 0:
+            print("bateu")
+            
+            hit_timer = cooldown
+            player_visible = False
+            life -= 1
+            
+
+        # Timer de hit
+        if hit_timer > 0:
+            hit_timer -= dt * 1000  # Multiplica para ficar em milissegundos
+            # Piscar
+            if hit_timer % 300 < 150:
+                player_visible = False
+            else:
+                player_visible = True
+        else:
+            player_visible = True
+            
+            
+        
     #player movement
     keys = pygame.key.get_pressed()
     if keys[pygame.K_a]:
@@ -64,12 +116,19 @@ while running:
 
     #atualiza para a nova posição
     player_rect.center = (x_player, y_player)
-
     
+  
     # apresentando na tela
-    display_surface.blit(player_surf,player_rect)
-    display_surface.blit(meteor,meteor_rect)
+    if player_visible:
+        display_surface.blit(player_surf,player_rect)
+
     display_surface.blit(laser, laser_rect)
+    
+    # esses blocos mostra o texto da vida não fico do jeito que eu queria mais vai assim
+    life_text = f'Life: {life}'
+    formatedText = font.render(life_text, True, (255, 255, 255))
+    # o primeiro parametro é 'X' e o segundo é 'y'
+    display_surface.blit(formatedText, (100, 30))
     
     
     for pos in posicoes:
