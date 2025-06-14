@@ -22,6 +22,4 @@ de um triângulo, calcule e mostre o comprimento da hipotenusa.
 18 faça um programa que leia um angulo e mostre seu seno, cosseno e tangente
 19 sorteando un item da lista
 20 sorteando uma ordem na lista 
-
-
 21 tocar uma musica em python

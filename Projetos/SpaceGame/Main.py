@@ -28,6 +28,13 @@ laser_rect = laser.get_rect(bottomleft = (20, WINDOW_HEIGHT - 20))
 x_player = WINDOW_WIDTH/2
 y_player = WINDOW_HEIGHT/2
 
+
+# atirar o laser
+lasers = []
+laser_cooldown = 500
+last_laser_time = 0
+
+
 # stars in background
 posicoes = []
 for _ in range(20):
@@ -56,7 +63,7 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    
+            
     
     display_surface.fill('black')
     
@@ -100,8 +107,6 @@ while running:
         else:
             player_visible = True
             
-            
-        
     #player movement
     keys = pygame.key.get_pressed()
     if keys[pygame.K_a]:
@@ -112,6 +117,14 @@ while running:
         y_player += 200 * dt
     if keys[pygame.K_w]:
         y_player -= 200 * dt
+        
+
+    if keys[pygame.K_SPACE] and current_time - last_laser_time > laser_cooldown:
+        laser_x = player_rect.centerx - laser.get_width() // 2
+        laser_y = player_rect.top
+        laser_rect_new = laser.get_rect(topleft=(laser_x, laser_y))
+        lasers.append(laser_rect_new)
+        last_laser_time = current_time
         
 
     #atualiza para a nova posição
@@ -133,6 +146,24 @@ while running:
     
     for pos in posicoes:
         display_surface.blit(star, pos)
+    
+    for laser_rect in lasers[:]:  # Faz uma cópia da lista
+        laser_rect.y -= 400 * dt  # velocidade do laser
+
+        if laser_rect.bottom < 0:
+            lasers.remove(laser_rect)
+            continue
+        
+    for meteor_rect in meteors[:]:
+        if laser_rect.colliderect(meteor_rect):
+            meteors.remove(meteor_rect)
+            if laser_rect in lasers:
+                lasers.remove(laser_rect)
+            break
+
+
+        display_surface.blit(laser, laser_rect)
+    
     
     pygame.display.update()
     
